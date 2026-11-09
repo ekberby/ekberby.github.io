@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Akbar Abilov · Software Engineer</title>
-<meta name="description" content="Akbar Abilov: backend, data, and machine learning projects, each told from problem to result.">
+<meta name="description" content="Akbar Abilov: my backend, data and machine learning projects, from the problem to the result.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- [ui-ux-pro-max typography] Archivo headings + Space Grotesk body; [H-TYPE-2] two typefaces, each with one job -->
@@ -193,9 +193,9 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
   <div class="wrap">
     <p class="eyebrow">Software engineer · Backend and data</p>
     <h1>Akbar Abilov</h1>
-    <p class="lead">I build backends, data pipelines, and machine learning systems, and I check them against the numbers. Master of Science in Urban Data Science student at New York University.</p>
+    <p class="lead">I build backends, data pipelines and machine learning systems. I always check the results against the real numbers so I know they are right. Right now I am doing my Master of Science in Urban Data Science at New York University.</p>
     <div class="ctas">
-      <a class="btn primary" href="#work">See the work</a>
+      <a class="btn primary" href="#work">See my work</a>
       <a class="btn" href="Akbar_Abilov_Resume.pdf">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 18v-6"/><path d="m9 15 3 3 3-3"/></svg>
         Resume (PDF)</a>
@@ -215,29 +215,29 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
 <section class="section" id="work" aria-labelledby="work-h">
   <div class="wrap">
     <div class="section-head reveal">
-      <h2 id="work-h">Selected work</h2>
-      <p>Four projects, each told from the problem to the result, including what didn't work.</p>
+      <h2 id="work-h">My work</h2>
+      <p>These are four of my projects. For each one I explain the problem, what I did, what went wrong and what I got in the end.</p>
     </div>
     <ul class="cards">
       <li class="reveal"><a class="card" href="#pull">
         <span class="kind">Backend · Data pipeline</span>
         <span class="big">90</span>
-        <p class="big-label">bills recovered on every sync, after finding a silent data-loss bug</p>
+        <p class="big-label">bills I recovered on every sync after I found a silent data-loss bug</p>
         <h3>Pull, Congressional Bill Tracker</h3></a></li>
       <li class="reveal"><a class="card" href="#asknyc">
         <span class="kind">AI · Retrieval</span>
         <span class="big">1 cmd</span>
-        <p class="big-label">to run a zoning assistant that cites a section for every claim</p>
+        <p class="big-label">is all you need to run a zoning assistant that cites a section for every answer</p>
         <h3>AskNYC Zoning Assistant</h3></a></li>
       <li class="reveal"><a class="card" href="#landuse">
         <span class="kind">Computer vision</span>
         <span class="big">92.6%</span>
-        <p class="big-label">test accuracy on 27,000 satellite images, vs 10% by chance</p>
+        <p class="big-label">test accuracy on 27,000 satellite images. Random guessing gets 10%.</p>
         <h3>Satellite Land-Use Classification</h3></a></li>
       <li class="reveal"><a class="card" href="#bus">
         <span class="kind">Machine learning · Team of 4</span>
         <span class="big">0.704</span>
-        <p class="big-label">R² predicting bus speed, vs 0.435 for the linear baseline</p>
+        <p class="big-label">R² for predicting bus speed. The linear baseline got 0.435.</p>
         <h3>NYC Bus Speed Prediction</h3></a></li>
     </ul>
   </div>
@@ -249,9 +249,9 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
     <aside class="span-4 meta reveal">
       <span class="num">01</span>
       <h3 id="pull-h">Pull, Congressional Bill Tracker</h3>
-      <p class="tag">A civic app that tracks every bill in the 119th U.S. Congress and helps people act on them.</p>
+      <p class="tag">The project is about tracking every bill in the 119th U.S. Congress and helping people act on them.</p>
       <dl>
-        <dt>My role</dt><dd>Database schema and data pipeline, in a team of 4</dd>
+        <dt>My role</dt><dd>I own the database schema and the data pipeline. We are a team of 4.</dd>
         <dt>Stack</dt><dd>Python, FastAPI, PostgreSQL, Alembic, pytest, GitHub Actions</dd>
       </dl>
       <a class="link" href="https://github.com/NYU-Congressmen/congress-tracker">
@@ -261,31 +261,31 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
     <div class="span-8">
       <div class="hero-stat reveal">
         <p class="display">19,841 / 19,841</p>
-        <p>bills in our database, matching Congress.gov exactly. Before the fix, every sync quietly lost 90 of them.</p>
+        <p>bills in our database, the same as Congress.gov. Before I fixed it, every sync was losing 90 bills without any error.</p>
         <ul class="stats">
-          <li><b>26</b><span>requests to load all summaries (was ~19,700)</span></li>
-          <li><b>0.08 s</b><span>cached bill text diff (0.60 s first time)</span></li>
+          <li><b>26</b><span>requests to load all summaries, instead of ~19,700</span></li>
+          <li><b>0.08 s</b><span>to show a cached bill text diff (0.60 s the first time)</span></li>
           <li><b>14</b><span>PostgreSQL tables I designed</span></li>
-          <li><b>83</b><span>passing tests in CI</span></li>
+          <li><b>83</b><span>tests passing in CI</span></li>
         </ul>
       </div>
       <div class="story">
         <div class="step reveal">
           <h4>Problem</h4>
-          <p class="headline">Congress.gov has the data, but no bill status, no search across bills, and one shared limit of 5,000 requests an hour.</p>
-          <p>An app that called it live would run out of requests and still couldn't answer "which bills about AI passed the House?"</p>
+          <p class="headline">Congress.gov has the data, but it does not give bill status, it has no search across bills, and everyone shares a limit of 5,000 requests an hour.</p>
+          <p>If our app called it live, we would run out of requests, and we still could not answer simple questions like which AI bills passed the House.</p>
         </div>
         <div class="step reveal">
           <h4>Research</h4>
-          <p class="headline">I mapped the API's limits and traps before writing any code.</p>
+          <p class="headline">Before writing any code, I went through the API to understand its limits and traps.</p>
           <ul>
-            <li>At most 250 items per page, with offset paging, and no <code>status</code> field at all</li>
-            <li>"Rule H. Res. 436 passed House." is a procedural vote, not the bill passing. Status matching only trusts the official wording</li>
+            <li>It gives at most 250 items per page, uses offset paging, and has no <code>status</code> field at all</li>
+            <li>"Rule H. Res. 436 passed House." looks like the bill passed, but it is only a procedural vote. So I only trust the official wording when I set the status</li>
           </ul>
         </div>
         <div class="step reveal">
           <h4>Approach</h4>
-          <p class="headline">Copy the data into our own Postgres on a schedule, and serve everything from there.</p>
+          <p class="headline">What we do is copy the data into our own PostgreSQL database on a schedule and serve everything from there.</p>
           <ol class="flow" aria-label="Data flow">
             <li><b>Congress.gov API</b>5,000 requests/hour</li>
             <li class="key"><b>Sync</b>count-checked, idempotent upserts</li>
@@ -293,17 +293,17 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
             <li><b>FastAPI</b>search, filters, diffs</li>
             <li><b>React app</b>never calls Congress.gov</li>
           </ol>
-          <p style="margin-top:12px">Each bill's status is worked out from its action history and never moves backwards. Rules like "one review per user per bill" are <code>UNIQUE</code> and <code>CHECK</code> constraints, so a frontend bug can't write bad data.</p>
+          <p style="margin-top:12px">The status of each bill comes from its action history, and it never goes backwards. I also put rules like "one review per user per bill" into the database as <code>UNIQUE</code> and <code>CHECK</code> constraints, so a bug in the frontend cannot save bad data.</p>
         </div>
         <div class="step reveal">
           <h4>What went wrong</h4>
-          <p class="headline">Every sync reported 19,832 bills saved, but the database had fewer.</p>
-          <p>No errors, plausible totals. My first two ideas (re-sort, re-read) were disproved by the data. The real cause: the list was sorted by a date-only field, and 2,023 bills shared one date, so offset pages cut the ties differently each time. Newest-first lost 90 bills per run; oldest-first lost 49.</p>
+          <p class="headline">Every sync said 19,832 bills were saved, but the database had fewer.</p>
+          <p>There were no errors and the totals looked fine. My first two ideas (sorting again and reading again) did not hold up when I checked the data. The real cause was that the list was sorted by a date field, and 2,023 bills had the same date, so the pages split them differently each time. Sorting newest first lost 90 bills on every run, and oldest first lost 49.</p>
         </div>
         <div class="step reveal">
           <h4>Result</h4>
-          <p class="headline">A stable sort plus a check against the API's own count, with a re-read and deduplication if anything is missing.</p>
-          <p>A test fakes the API and drops an item on purpose to prove the second pass recovers it. Production now matches Congress.gov exactly for bills, summaries, and all 539 current members.</p>
+          <p class="headline">I switched to a stable order and added a check against the count the API reports. If something is missing, it reads again and removes duplicates.</p>
+          <p>I wrote a test that fakes the API and drops one bill on purpose, to make sure the second pass gets it back. Now production has exactly the same bills, summaries and 539 current members as Congress.gov.</p>
         </div>
       </div>
     </div>
@@ -316,9 +316,9 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
     <aside class="span-4 meta reveal">
       <span class="num">02</span>
       <h3 id="ask-h">AskNYC Zoning Assistant</h3>
-      <p class="tag">Ask a plain-English question about NYC zoning; get an answer grounded in the Zoning Resolution, with sections cited.</p>
+      <p class="tag">You ask a question about NYC zoning in plain English, and you get an answer from the Zoning Resolution with the sections cited.</p>
       <dl>
-        <dt>My role</dt><dd>Solo, end to end</dd>
+        <dt>My role</dt><dd>I built it alone, from start to finish</dd>
         <dt>Stack</dt><dd>Python, FAISS, Sentence-Transformers, Llama 3.1 (Ollama), Streamlit, Docker</dd>
       </dl>
       <a class="link" href="https://github.com/ekberby/AskNYC">
@@ -327,23 +327,23 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
     </aside>
     <div class="span-8">
       <div class="hero-stat reveal">
-        <p class="display">Every claim, cited</p>
-        <p>The model may only answer from the retrieved zoning text, and must name the section behind each claim.</p>
+        <p class="display">Every answer has a source</p>
+        <p>The model can only answer from the zoning text it found, and it has to name the section for each claim.</p>
         <ul class="stats">
-          <li><b>Top 3</b><span>section-tagged passages per question</span></li>
-          <li><b>~3,000</b><span>characters per passage</span></li>
-          <li><b>1</b><span>command to run, fully local</span></li>
+          <li><b>Top 3</b><span>section-tagged passages for each question</span></li>
+          <li><b>~3,000</b><span>characters in each passage</span></li>
+          <li><b>1</b><span>command to run it, fully local</span></li>
         </ul>
       </div>
       <div class="story">
         <div class="step reveal">
           <h4>Problem</h4>
-          <p class="headline">Zoning rules are dense, and a chatbot that guesses is worse than none.</p>
-          <p>On a regulatory topic, an answer is only useful if you can check where it came from.</p>
+          <p class="headline">Zoning rules are hard to read, and a chatbot that makes things up would be useless here.</p>
+          <p>For rules like these, an answer is only useful if you can check where it came from.</p>
         </div>
         <div class="step reveal">
           <h4>Approach</h4>
-          <p class="headline">Retrieve first, then generate only from what was retrieved.</p>
+          <p class="headline">First it finds the right passages, then the model answers only from them.</p>
           <ol class="flow" aria-label="Question flow">
             <li><b>Question</b>plain English</li>
             <li><b>Embed</b>all-MiniLM-L6-v2</li>
@@ -354,17 +354,17 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
         </div>
         <div class="step reveal">
           <h4>Key decisions</h4>
-          <p class="headline">Keep every passage traceable to a section, and keep everything on the machine.</p>
+          <p class="headline">I wanted every passage to point back to a section, and I wanted everything to run on my own machine.</p>
           <ul>
-            <li>Passages keep their section number, title, and link, with a small overlap so context isn't cut at a boundary</li>
-            <li>Normalized vectors in an inner-product index make retrieval a plain cosine-similarity search</li>
-            <li>A local model through Ollama means no API costs or keys, packaged in Docker</li>
+            <li>Each passage keeps its section number, title and link. Passages overlap a little so the context does not get cut at a boundary</li>
+            <li>I normalized the vectors and used an inner-product index, so the search works as cosine similarity</li>
+            <li>The model runs locally with Ollama, so there are no API costs or keys. Everything is packaged in Docker</li>
           </ul>
         </div>
         <div class="step reveal">
-          <h4>Honest status</h4>
-          <p class="headline">It works end to end; it has not been benchmarked yet.</p>
-          <p>The next step is a small set of zoning questions with known answers, to measure how often the cited section is the right one.</p>
+          <h4>Current status</h4>
+          <p class="headline">It works from start to finish, but I have not measured its accuracy yet.</p>
+          <p>My next step is to make a small set of zoning questions with known answers and check how often it cites the right section.</p>
         </div>
       </div>
     </div>
@@ -377,9 +377,9 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
     <aside class="span-4 meta reveal">
       <span class="num">03</span>
       <h3 id="land-h">Satellite Land-Use Classification</h3>
-      <p class="tag">Sorting Sentinel-2 satellite tiles into 10 land-use types, for planning and environmental monitoring.</p>
+      <p class="tag">The project is about sorting Sentinel-2 satellite images into 10 land-use types, which is useful for urban planning and environmental monitoring.</p>
       <dl>
-        <dt>My role</dt><dd>Solo</dd>
+        <dt>My role</dt><dd>I did it alone</dd>
         <dt>Stack</dt><dd>Python, PyTorch, ResNet18, Google Colab</dd>
       </dl>
       <a class="link" href="https://github.com/ekberby/Deep-Learning-Land-Use">
@@ -389,22 +389,22 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
     <div class="span-8">
       <div class="hero-stat reveal">
         <p class="display">92.6%</p>
-        <p>test accuracy on the EuroSAT dataset (27,000 images, 10 classes).</p>
-        <div class="compare" role="img" aria-label="Test accuracy: this model 92.6 percent, random chance 10 percent">
-          <div class="bar-row"><span>This model</span><span class="bar-track"><span class="bar ours" style="width:92.6%"></span><span class="bar-val">92.6%</span></span></div>
-          <div class="bar-row"><span>Random chance</span><span class="bar-track"><span class="bar" style="width:10%"></span><span class="bar-val">10%</span></span></div>
+        <p>test accuracy on the EuroSAT dataset, which has 27,000 images in 10 classes.</p>
+        <div class="compare" role="img" aria-label="Test accuracy: this model 92.6 percent, random guessing 10 percent">
+          <div class="bar-row"><span>My model</span><span class="bar-track"><span class="bar ours" style="width:92.6%"></span><span class="bar-val">92.6%</span></span></div>
+          <div class="bar-row"><span>Random guessing</span><span class="bar-track"><span class="bar" style="width:10%"></span><span class="bar-val">10%</span></span></div>
         </div>
       </div>
       <div class="story">
         <div class="step reveal">
           <h4>Approach</h4>
-          <p class="headline">Reuse what a model already knows about images, and train only the last layer.</p>
-          <p>A ResNet18 pretrained on ImageNet, with the backbone frozen and a new 10-class head. It passed 90% accuracy within a single epoch.</p>
+          <p class="headline">Instead of training from zero, I used a model that already knows images and trained only the last layer.</p>
+          <p>I took a ResNet18 pretrained on ImageNet, froze it and added a new 10-class layer. It reached about 90% accuracy after just one epoch.</p>
         </div>
         <div class="step reveal">
-          <h4>What it gets wrong</h4>
-          <p class="headline">Crops vs. other vegetation, and highways vs. rivers.</p>
-          <p>From orbit these share texture and color, so the confusion comes from the images themselves. Visually distinct classes do far better: forest and sea/lake reach 97–99% precision.</p>
+          <h4>What went wrong</h4>
+          <p class="headline">It mixes up crops with other vegetation, and highways with rivers.</p>
+          <p>From satellite height these look very similar in texture and color, so the problem is in the images themselves. Classes that look different do much better: forest and sea/lake get 97–99% precision.</p>
         </div>
       </div>
     </div>
@@ -417,17 +417,17 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
     <aside class="span-4 meta reveal">
       <span class="num">04</span>
       <h3 id="bus-h">NYC Bus Speed Prediction</h3>
-      <p class="tag">Predicting bus speeds and severe delays, and ranking which routes should get camera enforcement of bus lanes next.</p>
+      <p class="tag">We predicted bus speeds and severe delays, and ranked which routes should get bus-lane cameras next.</p>
       <dl>
-        <dt>My role</dt><dd>Data integration, regression and classification models, clustering and route ranking, in a team of 4</dd>
+        <dt>My role</dt><dd>We were a team of 4. I worked on data integration, the regression and classification models, clustering and the route ranking</dd>
         <dt>Stack</dt><dd>Python, pandas, scikit-learn</dd>
-        <dt>Code</dt><dd>Course project, no public repository</dd>
+        <dt>Code</dt><dd>It was a course project, so there is no public repository</dd>
       </dl>
     </aside>
     <div class="span-8">
       <div class="hero-stat reveal">
         <p class="display">R² 0.704</p>
-        <p>predicting bus speed with a random forest, and ROC-AUC 0.900 for flagging severe delays.</p>
+        <p>for predicting bus speed with a random forest. For severe delays we got a ROC-AUC of 0.900.</p>
         <div class="compare" role="img" aria-label="R squared for bus speed: random forest 0.704, linear baseline 0.435">
           <div class="bar-row"><span>Random forest</span><span class="bar-track"><span class="bar ours" style="width:70.4%"></span><span class="bar-val">0.704</span></span></div>
           <div class="bar-row"><span>Linear baseline</span><span class="bar-track"><span class="bar" style="width:43.5%"></span><span class="bar-val">0.435</span></span></div>
@@ -436,31 +436,31 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
       <div class="story">
         <div class="step reveal">
           <h4>Problem</h4>
-          <p class="headline">NYC buses are slow, and bus-lane cameras cover only some routes. Which ones should be next?</p>
+          <p class="headline">NYC buses are slow, and only some routes have bus-lane cameras. We wanted to know which routes should be next.</p>
         </div>
         <div class="step reveal">
           <h4>Research</h4>
-          <p class="headline">5 transit datasets merged into one 6.14M-row table.</p>
-          <p>Segment speeds, wait times, 4.76M camera violations, enforced routes, and hourly ridership, joined with no missing values.</p>
+          <p class="headline">We merged 5 transit datasets into one table with 6.14M rows.</p>
+          <p>It had segment speeds, wait times, 4.76M camera violations, the list of enforced routes and hourly ridership, with no missing values.</p>
         </div>
         <div class="step reveal">
-          <h4>What didn't work, and the fixes</h4>
-          <p class="headline">Three traps that would have made the results look better than they were.</p>
+          <h4>What went wrong</h4>
+          <p class="headline">We found three traps that would have made our results look better than they really were.</p>
           <ul>
-            <li><b>Random split:</b> bus speed is seasonal, so a random split lets the model see the future. We split by time instead</li>
-            <li><b>Linear models:</b> plateaued at R² 0.435 because hour-of-day and distance effects aren't linear. Random forests closed the gap</li>
-            <li><b>Naive comparison:</b> enforced routes look slower (8.07 vs 9.33 mph) only because cameras went to slow routes first. We compared each route with itself, before and after</li>
+            <li><b>Random split:</b> bus speed changes by season, so a random split lets the model see the future. We split by time instead</li>
+            <li><b>Linear models:</b> they got stuck at R² 0.435 because time of day and distance do not affect speed in a straight line. Random forests fixed that</li>
+            <li><b>Simple comparison:</b> routes with cameras look slower (8.07 vs 9.33 mph) only because the cameras were put on slow routes first. So we compared each route with itself, before and after</li>
           </ul>
         </div>
         <div class="step reveal">
           <h4>Result</h4>
-          <p class="headline">A ranked shortlist for the next round of enforcement.</p>
+          <p class="headline">In the end we had a ranked shortlist of routes for the next cameras.</p>
           <ul class="stats">
-            <li><b>+6.42%</b><span>average speed on enforced routes after cameras</span></li>
-            <li><b>7</b><span>routes in the top 10 under every weighting</span></li>
-            <li><b>0.0007</b><span>std. dev. of R² across 10 random seeds</span></li>
+            <li><b>+6.42%</b><span>average speed increase on routes after cameras</span></li>
+            <li><b>7</b><span>routes stayed in the top 10 under every weighting</span></li>
+            <li><b>0.0007</b><span>standard deviation of R² over 10 random seeds</span></li>
           </ul>
-          <p style="margin-top:12px">The busiest corridors are already about 95% enforced; the remaining demand is in Queens and Brooklyn.</p>
+          <p style="margin-top:12px">The busiest routes already have about 95% coverage. The routes that still need cameras are mostly in Queens and Brooklyn.</p>
         </div>
       </div>
     </div>
@@ -476,23 +476,23 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
         <div class="job-head"><h3>Data Platform Developer</h3><span class="when">Oct 2026 – Present</span></div>
         <p class="org">NYU Marron Institute of Urban Management</p>
         <ul>
-          <li>Architected a 10-module system and relational data model that unifies case management, project management, and monitoring and evaluation for field programs handling sensitive personal data, replacing Excel-based tracking</li>
-          <li>Translated 47 stakeholder requirements and 6 use cases into a design specification, tracing 90 design changes to their source</li>
-          <li>Designed offline data sync and role-based access control with consent checks, so field staff can record data without connectivity</li>
+          <li>I designed a 10-module system and its data model that combines case management, project management, and monitoring and evaluation. It is for field programs that handle sensitive personal data, and it replaces their Excel tracking</li>
+          <li>I turned 47 stakeholder requirements and 6 use cases into a design specification, and I traced each of the 90 design changes back to where it came from</li>
+          <li>I designed offline sync and role-based access with consent checks, so field staff can record data without internet and personal records stay protected</li>
         </ul>
       </div>
       <div class="job reveal">
         <div class="job-head"><h3>BIM Automation Intern</h3><span class="when">May 2025 – Aug 2025</span></div>
         <p class="org">PortBIM</p>
         <ul>
-          <li>Built 5+ automation tools for Autodesk Revit and AutoCAD in C# and Python</li>
-          <li>Rewrote Autodesk Dynamo visual scripts as compiled C# code</li>
-          <li>Built a central update and configuration system that pushed new tool versions to every workstation at once</li>
+          <li>I built 5+ automation tools for Autodesk Revit and AutoCAD in C# and Python</li>
+          <li>I rewrote Autodesk Dynamo visual scripts as compiled C# code</li>
+          <li>I built a central update and configuration system that sends new tool versions to every workstation at once</li>
         </ul>
         <ul class="stats">
-          <li><b>60–70%</b><span>less manual workflow time</span></li>
+          <li><b>60–70%</b><span>less time on manual work</span></li>
           <li><b>2–3×</b><span>faster automation</span></li>
-          <li><b>10+ h</b><span>saved per week for engineers</span></li>
+          <li><b>10+ h</b><span>saved for engineers every week</span></li>
         </ul>
       </div>
     </div>
@@ -504,8 +504,8 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
   <div class="wrap grid">
     <div class="span-8 about reveal">
       <h2 id="about-h" class="section-head" style="font-size:clamp(28px,4vw,40px);margin:0 0 24px">About</h2>
-      <p>I like problems where the data has to be right. One of the bugs I've found produced no errors at all: the totals only stopped adding up when I compared what we saved with what the source said it had.</p>
-      <p>I studied Computer Science at the University of Essex, and I'm now doing a Master of Science in Urban Data Science at NYU, where I work on data systems for public programs.</p>
+      <p>I like working on problems where the data has to be right. One bug I found did not show any errors at all. I only noticed it because the totals did not match when I compared what we saved with what the source had.</p>
+      <p>I studied Computer Science at the University of Essex. Now I am doing my Master of Science in Urban Data Science at NYU, and I also work at the NYU Marron Institute building data systems for field programs.</p>
     </div>
     <div class="span-4 reveal">
       <dl class="skills">
@@ -520,12 +520,12 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
 <!-- CLOSING: [H-CLOSE-1] re-sell in bullets, end on name + contact -->
 <section class="closing" id="contact" aria-labelledby="contact-h">
   <div class="wrap">
-    <p class="eyebrow">Let's talk</p>
+    <p class="eyebrow">Contact me</p>
     <h2 id="contact-h">Akbar Abilov</h2>
     <ul>
-      <li>Backends and APIs in Python (FastAPI) and Java (Spring Boot)</li>
-      <li>PostgreSQL schemas, migrations, and data pipelines that match their source</li>
-      <li>Machine learning, from data integration to honest evaluation</li>
+      <li>I build backends and APIs in Python (FastAPI) and Java (Spring Boot)</li>
+      <li>I design PostgreSQL schemas, migrations and data pipelines that match their source</li>
+      <li>I work on machine learning, from merging the data to checking the results honestly</li>
     </ul>
     <div class="ctas">
       <a class="btn primary" href="mailto:aa13471@nyu.edu">
