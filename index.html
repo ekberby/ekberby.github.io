@@ -134,6 +134,23 @@ code { font: 0.9em ui-monospace, SFMono-Regular, Menlo, monospace; background: v
 .bar.ours { background: var(--accent); }
 .bar-val { font-variant-numeric: tabular-nums; color: var(--ink); font-weight: 600; white-space: nowrap; }
 
+/* Other projects: compact, grouped, same grid [H-GRID-1]; one fact each [H-STORY-6]; all projects shown at user's request */
+.group { margin-top: 48px; }
+.group:first-of-type { margin-top: 0; }
+.group h3 { font: 600 13px Archivo, sans-serif; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 16px; }
+.minis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gutter); list-style: none; padding: 0; margin: 0; }
+@media (max-width: 1000px) { .minis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .minis { grid-template-columns: 1fr; } }
+.mini { display: flex; flex-direction: column; gap: 10px; height: 100%; padding: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.mini h4 { font: 600 18px/1.3 Archivo, sans-serif; margin: 0; }
+.mini .who { font-size: 13px; color: var(--muted); margin: -4px 0 0; }
+.mini p { margin: 0; color: var(--ink-2); font-size: 15px; line-height: 1.6; }
+.mini .fact { color: var(--ink); font-weight: 500; }
+.mini .fact b { font: 700 1.15em Archivo, sans-serif; font-variant-numeric: tabular-nums; }
+.mini .stack { font-size: 13px; color: var(--muted); margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line); }
+.mini .link { font-size: 14px; min-height: 44px; margin: -8px 0 -12px; }
+.mini .nolink { font-size: 13px; color: var(--muted); }
+
 /* Experience */
 .jobs { display: grid; gap: 24px; }
 .job { padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
@@ -216,7 +233,7 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
   <div class="wrap">
     <div class="section-head reveal">
       <h2 id="work-h">My work</h2>
-      <p>These are four of my projects. For each one I explain the problem, what I did, what went wrong and what I got in the end.</p>
+      <p>These are my four main projects. For each one I explain the problem, what I did, what went wrong and what I got in the end. All my other projects are <a href="#more">further down</a>.</p>
     </div>
     <ul class="cards">
       <li class="reveal"><a class="card" href="#pull">
@@ -466,6 +483,112 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
     </div>
   </div>
 </article>
+
+<!-- OTHER PROJECTS: every remaining project in CV/Projects, grouped by kind -->
+<section class="section" id="more" aria-labelledby="more-h">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2 id="more-h">Other projects</h2>
+      <p>These are the rest of my projects, from research and data analysis to backend and smaller software projects.</p>
+    </div>
+
+    <div class="group">
+      <h3>Research</h3>
+      <ul class="minis">
+        <li class="reveal"><div class="mini">
+          <h4>LiDAR and Hyperspectral Road Analysis</h4>
+          <p class="who">Team of 3</p>
+          <p>We tested if aerial LiDAR can replace expensive hyperspectral images for checking road conditions in Sunset Park, Brooklyn.</p>
+          <p class="fact"><b>86 of 105</b> tree canopies found from LiDAR shadows only</p>
+          <p>We matched manholes between the two data types. I found that robust intensity normalization makes pavement differences easier to see. We could not build automatic checking and naming of the matched objects because of the time limit.</p>
+          <p class="stack">Python · CloudCompare · K-Means · DBSCAN · PCA</p>
+          <span class="nolink">Research project, no public repository</span>
+        </div></li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h3>Data science and GIS</h3>
+      <ul class="minis">
+        <li class="reveal"><div class="mini">
+          <h4>NYC EV Charging Gap</h4>
+          <p class="who">Team of 2</p>
+          <p>We looked at whether people who cannot charge an EV at home live far from public chargers, across every census tract in NYC.</p>
+          <p class="fact"><b>97.5%</b> of census tracts have no public charger</p>
+          <p>A spatial lag model showed that renters without parking predict the gap, and income does not.</p>
+          <p class="stack">Python · GeoPandas · OSMnx · PySAL · Moran's I · Gi*</p>
+          <span class="nolink">Course project, no public repository</span>
+        </div></li>
+        <li class="reveal"><div class="mini">
+          <h4>NYC 311 Insight Summarizer</h4>
+          <p class="who">Solo</p>
+          <p>It pulls live NYC 311 complaints, calculates the statistics with pandas, and then an LLM writes a summary only from those numbers, so it does not make up statistics.</p>
+          <p class="fact"><b>$0</b> to run, on Groq's free tier</p>
+          <p class="stack">Python · pandas · Streamlit · Plotly · Llama 3.1 (Groq)</p>
+          <a class="link" href="https://github.com/ekberby/311-data-insight"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Code on GitHub</a>
+        </div></li>
+        <li class="reveal"><div class="mini">
+          <h4>Chicago Spatial Disadvantage</h4>
+          <p class="who">Solo</p>
+          <p>I mapped poverty, unemployment, vacant buildings and car access across Chicago, step by step from basic maps to spatial statistics.</p>
+          <p class="fact"><b>4 methods</b> gave the same answer: disadvantage is concentrated in the south and southeast</p>
+          <p class="stack">Python · GeoPandas · Folium · KDE · Gi* · LISA</p>
+          <span class="nolink">Course project, no public repository</span>
+        </div></li>
+        <li class="reveal"><div class="mini">
+          <h4>Weather and Traffic Delays</h4>
+          <p class="who">Team of 5</p>
+          <p>We tested whether bad weather makes traffic delays longer in New York State, using 2018 traffic incident data.</p>
+          <p>We used logistic regression and a chi-squared test to look at it from two sides.</p>
+          <p class="stack">Python · pandas · Hypothesis testing · Logistic regression</p>
+          <span class="nolink">Course project, no public repository</span>
+        </div></li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h3>Backend and software</h3>
+      <ul class="minis">
+        <li class="reveal"><div class="mini">
+          <h4>Trip Management Web App</h4>
+          <p class="who">Solo</p>
+          <p>A Spring Boot web app where users register, log in and manage their trips. Every page is protected with Spring Security, and the data is in PostgreSQL.</p>
+          <p class="stack">Java · Spring Boot · Spring Security · PostgreSQL · Thymeleaf</p>
+          <a class="link" href="https://github.com/ekberby/Tourism_project_web_demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Code on GitHub</a>
+        </div></li>
+        <li class="reveal"><div class="mini">
+          <h4>Café Order Server</h4>
+          <p class="who">Solo</p>
+          <p>A café simulation where many customers order over sockets at the same time. The barista server gives each customer its own thread and keeps the shared orders safe with synchronization.</p>
+          <p class="fact"><b>2 + 2</b> teas and coffees brewing at once, like a real counter</p>
+          <p class="stack">Java · Sockets · Multithreading</p>
+          <a class="link" href="https://github.com/ekberby/Cafe_Demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Code on GitHub</a>
+        </div></li>
+        <li class="reveal"><div class="mini">
+          <h4>Spring Boot REST API</h4>
+          <p class="who">Solo</p>
+          <p>I built this to learn Spring Boot properly: a REST API split into controller, service and repository layers, with Spring Security and Swagger docs.</p>
+          <p class="stack">Java · Spring Boot · PostgreSQL · Swagger · Spock</p>
+          <a class="link" href="https://github.com/ekberby/web_demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Code on GitHub</a>
+        </div></li>
+        <li class="reveal"><div class="mini">
+          <h4>Plane Crash Records Explorer</h4>
+          <p class="who">Solo</p>
+          <p>A Java console app to list, sort, search and filter plane crash records from 1933 to 2009. Each menu has its own interface and implementation.</p>
+          <p class="stack">Java · OOP · CSV</p>
+          <a class="link" href="https://github.com/ekberby/plane_crash_report_project"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Code on GitHub</a>
+        </div></li>
+        <li class="reveal"><div class="mini">
+          <h4>Python Adventure Game</h4>
+          <p class="who">Solo</p>
+          <p>A text adventure game with a Tkinter interface. You explore 4 towns, fight enemies, open treasure with keys and use a shop and inventory.</p>
+          <p class="stack">Python · Tkinter</p>
+          <a class="link" href="https://github.com/ekberby/Python_Adventure_Game"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Code on GitHub</a>
+        </div></li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 <!-- EXPERIENCE -->
 <section class="section" id="experience" aria-labelledby="exp-h">
