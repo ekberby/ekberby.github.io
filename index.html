@@ -152,6 +152,8 @@ code { font: 0.9em ui-monospace, SFMono-Regular, Menlo, monospace; background: v
 .mini .nolink { font-size: 13px; color: var(--muted); }
 
 /* Experience */
+.job .intro { color: var(--ink-2); margin: 0 0 12px; max-width: 46em; }
+.job .stack { font-size: 13px; color: var(--muted); margin: 16px 0 0; }
 .jobs { display: grid; gap: 24px; }
 .job { padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 .job-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline; }
@@ -197,6 +199,7 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
     <a class="brand" href="#top">Akbar Abilov</a>
     <nav class="nav" aria-label="Main">
       <a href="#work">Work</a>
+      <a class="hide-sm" href="#research">Research</a>
       <a class="hide-sm" href="#experience">Experience</a>
       <a class="hide-sm" href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -233,7 +236,7 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
   <div class="wrap">
     <div class="section-head reveal">
       <h2 id="work-h">My work</h2>
-      <p>These are my four main projects. For each one I explain the problem, what I did, what went wrong and what I got in the end. All my other projects are <a href="#more">further down</a>.</p>
+      <p>These are my four main projects. For each one I explain the problem, what I did, what went wrong and what I got in the end. My research and all my other projects are <a href="#research">further down</a>.</p>
     </div>
     <ul class="cards">
       <li class="reveal"><a class="card" href="#pull">
@@ -484,27 +487,65 @@ footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top:
   </div>
 </article>
 
+<!-- RESEARCH: separate section at Akbar's request; same card style as Experience [H-GRID-1]; facts from CV/Projects and the CVs -->
+<section class="section" id="research" aria-labelledby="research-h">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2 id="research-h">Research</h2>
+      <p>These are the research projects I worked on at NYU with my professors. For each one I explain what the study is about, what I did and what we could not finish.</p>
+    </div>
+    <div class="jobs">
+      <div class="job reveal">
+        <div class="job-head"><h3>LiDAR and Hyperspectral Road Analysis</h3><span class="when">Jan 2026 – May 2026</span></div>
+        <p class="org">Student Researcher, NYU Vertically Integrated Projects, Prof. Laefer · Team of 3</p>
+        <p class="intro">The project is about testing if aerial LiDAR can replace expensive hyperspectral images for checking road conditions in Sunset Park, Brooklyn.</p>
+        <ul>
+          <li>I separated ground points with a cloth simulation filter in CloudCompare and found tree canopies from LiDAR shadows in Python</li>
+          <li>We built 2 clustering pipelines to find pavement repairs, and checked both against NYC excavation permits</li>
+          <li>We extracted lane markings and matched manholes between the LiDAR and the hyperspectral images. I found that robust intensity normalization makes pavement differences easier to see</li>
+          <li>What we could not do: build a system that checks and names the matched objects automatically, because of the time limit</li>
+        </ul>
+        <ul class="stats">
+          <li><b>86 of 105</b><span>tree canopies found from LiDAR shadows only</span></li>
+          <li><b>2</b><span>pavement repair pipelines checked against NYC permits</span></li>
+          <li><b>412.6</b><span>points per m² in the point cloud</span></li>
+        </ul>
+        <p class="stack">Python · CloudCompare · K-Means · DBSCAN · PCA</p>
+      </div>
+      <div class="job reveal">
+        <div class="job-head"><h3>Hospital Touch-Point Mapping</h3><span class="when">Sept 2026 – Present</span></div>
+        <p class="org">Student Researcher, NYU Vertically Integrated Projects, Prof. Laefer · Team of 3</p>
+        <p class="intro">The project is about mapping which surfaces people touch after they leave NYC hospitals, using LiDAR and field observation data.</p>
+        <ul>
+          <li>I matched recorded touches to NYC bus stop locations from open data and placed them on a LiDAR point cloud of NYU Langone Brooklyn, as a first 3D heatmap</li>
+          <li>Touches sit at a realistic hand height, not on the ground or the roof of the shelter</li>
+          <li>Current status: we started with bus stops as a test. Next we will try other street objects like fire hydrants</li>
+        </ul>
+        <p class="stack">Python · LiDAR point clouds · NYC Open Data</p>
+      </div>
+      <div class="job reveal">
+        <div class="job-head"><h3>Work Zone Driving Study</h3><span class="when">Sept 2025 – Dec 2025</span></div>
+        <p class="org">Student Researcher, NYU Guided Study, Prof. Ergan · Team of 2</p>
+        <p class="intro">The study is about how drivers react to work zones in different conditions, based on past crash situations.</p>
+        <ul>
+          <li>We annotated frame by frame how each participant reacted in virtual reality work zone scenarios of 2 to 3 minutes each</li>
+          <li>We also cleaned the participant dataset for the analysis</li>
+        </ul>
+        <ul class="stats">
+          <li><b>40</b><span>participants</span></li>
+          <li><b>6</b><span>virtual reality work zone scenarios</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- OTHER PROJECTS: every remaining project in CV/Projects, grouped by kind -->
 <section class="section" id="more" aria-labelledby="more-h">
   <div class="wrap">
     <div class="section-head reveal">
       <h2 id="more-h">Other projects</h2>
-      <p>These are the rest of my projects, from research and data analysis to backend and smaller software projects.</p>
-    </div>
-
-    <div class="group">
-      <h3>Research</h3>
-      <ul class="minis">
-        <li class="reveal"><div class="mini">
-          <h4>LiDAR and Hyperspectral Road Analysis</h4>
-          <p class="who">Team of 3</p>
-          <p>We tested if aerial LiDAR can replace expensive hyperspectral images for checking road conditions in Sunset Park, Brooklyn.</p>
-          <p class="fact"><b>86 of 105</b> tree canopies found from LiDAR shadows only</p>
-          <p>We matched manholes between the two data types. I found that robust intensity normalization makes pavement differences easier to see. We could not build automatic checking and naming of the matched objects because of the time limit.</p>
-          <p class="stack">Python · CloudCompare · K-Means · DBSCAN · PCA</p>
-          <span class="nolink">Research project, no public repository</span>
-        </div></li>
-      </ul>
+      <p>These are the rest of my projects, from data analysis to backend and smaller software projects.</p>
     </div>
 
     <div class="group">
